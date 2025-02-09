@@ -1,44 +1,84 @@
-<!DOCTYPE html>
-<html lang="tr">
+<!doctype html>
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+    <title>Oem Calculater</title>
 </head>
+
 <body>
-    <div class="container">
-        <div class="box">
-            <ul class="controls">
-                <li class="left">
-                    <div class="icons">
-                        <i id="from" class="fas fa-volume-up"></i>
-                        <i id="from" class="fas fa-copy"></i>
+
+    <nav class="navbar navbar-dark bg-danger">
+        <div class="container">
+            <a href="#" class="navbar-brand">
+                Oem Calculater
+            </a>
+        </div>
+    </nav>
+
+    <div class="container mt-3">
+
+        <div class="card">
+            <div class="card-body">
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <input type="text" class="form-control" id="name" placeholder="Name">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input type="text" class="form-control" id="price" placeholder="Price">
+                        </div>
                     </div>
-                    <select id="from-lang"></select>
-                </li>
-                <li class="exchange"><i class="fas fa-exchange-alt"></i></li>
-                <li class="right">
-                    <select id="to-lang"></select>
-                    <div class="icons">
-                        <i id="to" class="fas fa-volume-up"></i>
-                        <i id="to" class="fas fa-copy"></i>
-                    </div>
-                </li>
-            </ul>
-            <div class="text-controls">
-                <textarea id="from-text" class="from-text" placeholder="Metin Girin"></textarea>
-                <textarea id="to-text" class="to-text" placeholder="Çeviri" readonly disabled></textarea>
+
+                    <button type="submit" class="btn btn-primary btn-sm">
+                        <i class="fas fa-plus"></i>
+                        Add
+                    </button>
+                    <button type="submit" class="btn btn-warning btn-sm">
+                        <i class="far fa-edit"></i>
+                        Save Changes
+                    </button>
+                    <button type="submit" class="btn btn-danger btn-sm">
+                        <i class="fas fa-times"></i>
+                        Delete
+                    </button>
+                    <button type="submit" class="btn btn-secondary btn-sm">
+                        <i class="fas fa-arrow-circle-left"></i>
+                        Cancel
+                    </button>
+                </form>
             </div>
         </div>
-        <button id="btnTranslate">Çevir</button>
+
+        <div class="card mt-3">
+            <table class="table">
+                <tbody id="item-list">
+                 
+                </tbody>
+            </table>
+        </div>
+
+        <div class="card mt-3">
+            <div class="card-footer text-right">
+                <p>Total (TL) <strong>1200 TL</strong></p>
+                <p>Total ($) <strong>300 $</strong></p>
+            </div>
+        </div>
+
     </div>
 
-
-
-    <script src="languages.js"></script>
-    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>  
 </body>
+
 </html>
